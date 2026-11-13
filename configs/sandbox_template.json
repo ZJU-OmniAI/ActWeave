@@ -1,0 +1,10 @@
+{
+  "base": "/absolute/path/to/python-base",
+  "python": "/absolute/path/to/python-base/bin/python3.11",
+  "mounts": {
+    "numpy": "/absolute/path/to/policy-env/lib/python3.11/site-packages/numpy",
+    "numpy.libs": "/absolute/path/to/policy-env/lib/python3.11/site-packages/numpy.libs",
+    "PIL": "/absolute/path/to/policy-env/lib/python3.11/site-packages/PIL",
+    "pillow.libs": "/absolute/path/to/policy-env/lib/python3.11/site-packages/pillow.libs"
+  }
+}

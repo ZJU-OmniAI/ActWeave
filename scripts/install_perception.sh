@@ -1,0 +1,3 @@
+#!/bin/bash
+set -euo pipefail
+python -m pip install fastapi uvicorn

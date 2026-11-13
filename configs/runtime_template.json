@@ -1,0 +1,43 @@
+{
+  "model": "your-model-id",
+  "reasoningEffort": "high",
+  "maxTokens": 8192,
+  "maxRequests": null,
+  "maxCells": 100,
+  "maxNudges": 20,
+  "episodeSeconds": 5400,
+  "cellSeconds": 600,
+  "ptcCpuSeconds": 5400,
+  "apiRequestSeconds": 120,
+  "policyPython": "/absolute/path/to/policy-env/bin/python",
+  "robotCalibration": "configs/robot_calibration.json",
+  "sandboxConfig": "configs/sandbox.local.json",
+  "outputRoot": "results",
+  "ports": {
+    "bridge": 8100,
+    "perception": 8002
+  },
+  "cpu": {
+    "service_threads": 1,
+    "ptc_threads": 1
+  },
+  "resource_domain": {
+    "directory": ".runtime/resources"
+  },
+  "runtime": {
+    "gpu_admission_seconds": 60
+  },
+  "perception": {
+    "min_free_gib": 8,
+    "startup_reserve_gib": 6
+  },
+  "jev": {
+    "model": "jev-1.14.0",
+    "endpoint": "https://your-jev-endpoint/systemone",
+    "requestSeconds": 120
+  },
+  "demonstrations": {
+    "enabled": true,
+    "directory": "assets/demonstrations"
+  }
+}

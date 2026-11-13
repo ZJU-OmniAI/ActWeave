@@ -1,0 +1,115 @@
+[
+  {
+    "tasks": [
+      "align_blocks", "arrange_largest_number", "arrange_largest_number_random",
+      "build_tower", "classify_objects", "classify_objects_by_language", "cover_blocks",
+      "deposit_coin", "fasten_screws", "fill_egg_holder", "fill_pen_holder",
+      "fold_clothes", "fold_clothes_random", "hang_mugs", "hang_mugs_random",
+      "imitate_sorting_sequence", "insert_tubes", "make_toast", "make_toast_random",
+      "organize_table", "pack_objects_into_box", "pack_objects_into_box_random",
+      "play_stacking_toy", "plug_in_charger", "pour_balls_into_vase", "press_by_number",
+      "push_T", "push_T_random", "put_bottles_into_dustbin", "solve_equation",
+      "sort_nesting_dolls_by_size", "sort_nesting_dolls_by_size_random", "stack_blocks",
+      "stack_blocks_by_language", "stack_blocks_random", "stack_bowls", "stack_bowls_random",
+      "store_laptop_and_headphones", "store_laptop_and_headphones_random",
+      "store_tools_in_toolbox", "swap_T", "swap_blocks", "sweep_blocks", "sweep_blocks_random"
+    ],
+    "text": "This task requires both arms near their initial poses at completion. Required placed objects must be released, with any task-specific open-gripper and event-order conditions satisfied. These are task conditions, not a required withdrawal, observation or return procedure."
+  },
+  {
+    "tasks": ["imitate_sorting_sequence", "play_tic_tac_toe", "make_kong"],
+    "text": "A benchmark-controlled third arm demonstrates a sequence or plays an opponent. It advances only during native actions, not camera reads or thinking. Some interactions require both controlled arms near their initial poses before the next event can begin. wait(n) retains the latest joint/gripper commands for n native actions; it consumes actions and does not freeze physics."
+  },
+  {
+    "tasks": ["make_kong"],
+    "text": "The kong requires three matching tiles in the player hand to be face-up while the other nine hand tiles remain upright. The separate replacement tile from the flat pile on the left is not the opponent discard and not one of those three matching hand tiles. Two arrangements are checked in order: with the matching triplet exposed and the other hand tiles upright, the replacement tile must first be flat in its face-down orientation (object quaternion wxyz [0, 0.707, 0.707, 0], within 7 degrees); it must then stand upright at the right end of the player row, within 1.5 cm in XY of world [0.319, -0.15], with both grippers open. Upright means the tile local +Y axis is within 7 degrees of world up; face-up matching tiles have local +Z within 30 degrees of up. These are object roles, stage conditions and final geometry, not prescribed grasps, TCP poses or recovery motions."
+  },
+  {
+    "tasks": ["align_blocks", "push_T", "push_T_random"],
+    "text": "Preserve the requested pushing operation. Lifting the pushed objects can invalidate this task even if their final placement looks correct."
+  },
+  {
+    "tasks": ["press_by_number"],
+    "text": "The native instruction omits the intermediate confirmation. Read the two number cards from the images. Press and fully release the left red button exactly its card's count, then press and fully release blue once. Complete the other red button's count, then press and fully release blue once again. Do not add extra red presses or extra blue confirmations."
+  },
+  {
+    "tasks": ["pick_from_conveyor_by_image"],
+    "text": "The native instruction mentions lifting the basket, but the completion condition also measures the target object's height. Identify the target from the board image. At completion it must be on the basket bottom and simultaneously more than 8 cm above its own initial height. Lifting only the basket, or lifting the target earlier and then lowering it, does not satisfy that simultaneous condition."
+  },
+  {
+    "tasks": ["fasten_screws"],
+    "text": "The native instruction reverses the movable and fixed parts: move each nut onto the fixed bolt of the same color. All three nuts must remain upright, centered and fully seated on their matching bolts together. The checker evaluates the assembled configuration rather than tightening torque or a prescribed number of turns. Leave both grippers open at completion."
+  },
+  {
+    "tasks": ["pour_liquid_into_cup", "pour_liquid_into_cup_random"],
+    "text": "After transferring the liquid into the cup, restore the source bottle from tilted to upright. That transition triggers the native liquid check; holding the bottle tilted does not trigger it. Transfer almost all liquid and leave little in the source. Visible liquid in the cup alone is insufficient."
+  },
+  {
+    "tasks": ["pour_by_language"],
+    "text": "The bottle-to-bowl assignments in the current instruction are checked in first, second and third pair order. Each source bottle must transition from tilted to upright after its pour to trigger that pair's liquid check. Almost all liquid must transfer, with little remaining in the source. An arm-return event while a later pair is complete but an earlier pair is incomplete irreversibly fails the native task."
+  },
+  {
+    "tasks": ["fold_clothes", "fold_clothes_random"],
+    "text": "The required fold brings both sleeves inward toward the opposite chest areas and the lower hem toward the corresponding shoulders, with hem and shoulder edges aligned. Completion is checked when open grippers and both returned arms newly satisfy the finishing condition. An arm-return event with the hem folded but a sleeve outside its required region irreversibly fails the native task."
+  },
+  {
+    "tasks": ["organize_table"],
+    "text": "All four arrangements must hold together and remain stable: mouse on its pad, keyboard covering the target region inside its frame, figurine upright and centered on its stand, and alarm clock upright on the drawer. The mouse's local +Y direction must point toward world +X; the keyboard's local +Y must point toward world +Y. Keep the keyboard, figurine and alarm clock upright."
+  },
+  {
+    "tasks": ["build_tower"],
+    "text": "The required final structure uses all eight pieces: two supports below the long board, the other two supports above that board and below the short board, the thin plank above the short board, and the distinct top piece above the thin plank. Upper boards and the top piece must be centered and aligned, with each component in its intended upright final orientation."
+  },
+  {
+    "tasks": ["make_toast", "make_toast_random"],
+    "text": "The final arrangement requires one bread slice in each toaster slot and the other two slices in the bread rack. All four slices must remain edge-standing. Both inserted slices must be seated before the lever-down event."
+  },
+  {
+    "tasks": ["pour_balls_into_vase"],
+    "text": "Every ball must finish inside the vase. The source cup must be upright before the final arm-return event. These are final arrangement and event conditions; they do not prescribe a grasp, mouth trajectory or observation sequence."
+  },
+  {
+    "tasks": ["sweep_blocks", "sweep_blocks_random"],
+    "text": "After collecting every target, leave the dustpan level, near its initial height and to the world-left of the broom, with the targets remaining inside its collection region. These are final arrangement requirements, not a ban on lifting or repositioning the dustpan during manipulation. Preserve the requested broom handover."
+  },
+  {
+    "tasks": ["align_blocks"],
+    "text": "The three block centers must lie on one line, with an edge direction of each block aligned to that line. Collinear centers alone do not satisfy the orientation condition. Lifting any block by more than 7 mm can irreversibly fail the native task."
+  },
+  {
+    "tasks": ["stack_bowls", "stack_bowls_random"],
+    "text": "All three bowls must form one upright stack, openings up, with centers aligned above one another within 4 cm in XY. Every bowl's up axis must be within 45 degrees of world up; the bottom bowl must be level within 7 degrees. These object-orientation conditions do not require a fixed TCP orientation throughout manipulation."
+  },
+  {
+    "tasks": ["fill_egg_holder"],
+    "text": "Seat all four eggs inside the egg holder's recesses, rather than leaving them perched on its rim, and close the lid. A top view overlapping the holder alone does not establish that an egg is seated inside it."
+  },
+  {
+    "tasks": ["play_Xylophone"],
+    "text": "Strike each key from left to right with the mallet's striking end, lifting the mallet away between consecutive strikes. This is a sequence of distinct strike-and-lift events, not just a final mallet pose or a TCP path over the keys."
+  },
+  {
+    "tasks": ["insert_key"],
+    "text": "Preserve the requested handover. Keep the key seated and upright while turning it to the required final orientation: its local +X points in the slot's local XY direction at -60 degrees from local +X toward local -Y. This defines the intended turned orientation; an arbitrary small turn does not complete the task."
+  },
+  {
+    "tasks": ["arrange_largest_number", "arrange_largest_number_random"],
+    "text": "The observed digits must form the largest number on the pads. Each digit's center must be within 2 cm in XY of its pad in the intended readable orientation. Each nonzero digit's local +Y must align with world +Y within 45 degrees; zero permits either local +Y or -Y. Digits other than zero and eight also require local +X to align with world +X within 45 degrees. These are final object-axis conditions, not a grasp or transport procedure."
+  },
+  {
+    "tasks": ["solve_equation"],
+    "text": "The missing pieces must make the current equation correct. Every placed missing piece must be within 18 mm in XY of its blank pad; its local +X and +Y axes must align with world +X and +Y respectively within 45 degrees. These are final object-axis conditions, not a handoff, measurement or recovery procedure."
+  },
+  {
+    "tasks": ["swap_blocks"],
+    "text": "Exactly three button press events correspond to the three individual required block moves. After each move, the button must depress below half its travel ratio, then release above 90 percent before the next move. The last release and final returned-arm condition must also hold. Extra presses can irreversibly fail the native task; late presses do not replace missing earlier events."
+  },
+  {
+    "tasks": ["sort_nesting_dolls_by_size", "sort_nesting_dolls_by_size_random"],
+    "text": "All five dolls must finish upright in increasing left-to-right size order. Their y coordinates must span no more than 3.5 cm; adjacent ordered centers require at least 3 cm separation in x. Uprightness is a final object condition, not a fixed TCP orientation during manipulation."
+  },
+  {
+    "tasks": ["put_bottles_into_dustbin"],
+    "text": "Every bottle must finish inside the dustbin. This requirement refers to the bin interior, not the outer silhouette or a cleared tabletop."
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "id": "retention_and_handover",
+    "title": "Separate gripper motion from object retention",
+    "applies": "Grasping, carrying or transferring an object between hands.",
+    "observed": "In v3 coin trajectories, apparently nonempty closure was followed by no object co-motion, and a receiving hand could close without retaining the coin. Earlier v2 paired executions used alternative support and transfer arrangements.",
+    "consider": "Compare the identified object with the fingers and its prior support before and after a chosen movement. For a handover, distinguish receiving-hand retention from donor release. Use calibrated measurements for metric geometry and visual evidence for visible relations.",
+    "boundary": "Jaw width alone does not establish retention. Occlusion can leave it unknown. No mandatory lift, handover order or recovery is prescribed.",
+    "sources": [
+      "v3-168-20261106: deposit_coin L1/L3",
+      "v2-168 paired trajectories: sort_nesting_dolls_by_size L0/random L0",
+      "log_261106.md"
+    ],
+    "source_type": "historical_observation"
+  },
+  {
+    "id": "functional_point_geometry",
+    "title": "Plan for the functional point rather than TCP arrival alone",
+    "applies": "Striking, insertion, pouring and placements where a tool tip, rim or opening matters.",
+    "observed": "In the v3 full run, Jev identified a mallet head above the key surface; Astra lowered it and changed later strike heights. The successful program also used functional-point binding and reachable pose candidates. A coin recovery remeasured and straightened the tilted coin before insertion.",
+    "consider": "Keep the functional point and its measurement step explicit. A same-step rigid binding can translate a chosen feature target into TCP candidates; remeasurement can reveal a changed relation. Read solver and actual execution feedback separately from the intended object effect.",
+    "boundary": "Rigid prediction is an assumption, not tracking. These combined trajectories do not isolate the gain of a helper or prescribe their coordinates for another scene.",
+    "sources": [
+      "v3-168-20261106: play_Xylophone L2; deposit_coin L0",
+      "log_261107.md"
+    ],
+    "source_type": "historical_observation"
+  },
+  {
+    "id": "release_and_support",
+    "title": "Distinguish placement motion from support transfer",
+    "applies": "Releasing an object over a basket, opening, stack, hook or slot.",
+    "observed": "Several v3 full-run placements released after zero-step planning failures or partial motion. In the Jev 84 run, Astra acted on a retained-coin diagnosis by reopening the gripper, but the coin subsequently lay flat and the task failed.",
+    "consider": "Use the actual endpoint and object-to-hand relation to assess the release location. Ask separately about entering the destination and remaining supported after release. If that relation is unresolved, choose whether another view or a different placement method would help.",
+    "boundary": "Correct diagnosis and gripper opening do not by themselves establish support or insertion. Release remains Astra's choice, with no confidence gate.",
+    "sources": [
+      "v3-168-20261106: classify_objects L3; plug_in_charger L0",
+      "jev-84 Part B: deposit_coin L0",
+      "log_261106.md",
+      "log_261104.md appendix D"
+    ],
+    "source_type": "historical_observation"
+  },
+  {
+    "id": "withdrawal_and_preservation",
+    "title": "Preserve existing progress during withdrawal and correction",
+    "applies": "Leaving a placement, changing posture near objects, or correcting an almost completed arrangement.",
+    "observed": "In v3 full-run regressions, a rejected retreat followed by home disturbed stacked bowls or a cover, and further hanging disturbed an already hung mug. A successful language-block stacking episode also used home after a rejected retreat, so that call pattern alone is not a failure rule. Some v2 paired placements avoided the observed disturbance.",
+    "consider": "Treat home as its own joint-return path, not the completion of a rejected retreat. Consider fingers, held objects and already placed objects along the selected movement. A preservation question can remain relevant while another object is manipulated.",
+    "boundary": "Do not ban home or further correction. Use the current geometry and visible relationships to select a method.",
+    "sources": [
+      "v3-168-20261106: stack_bowls_random L0; cover_blocks L3; hang_mugs L1; push_T L1",
+      "v2-168 paired trajectories",
+      "v3-168: stack_blocks_by_language L2",
+      "log_261106.md",
+      "log_261107.md"
+    ],
+    "source_type": "historical_observation"
+  },
+  {
+    "id": "consultation_and_decision",
+    "title": "Place new visual evidence before the decision that needs it",
+    "applies": "A program whose next actions depend on a new visual interpretation.",
+    "observed": "In the Jev 84 run, some consultations returned inside a cell that continued prewritten actions; a later model turn could change the program. In the latest v3 run, an occlusion suggestion was delivered but additional striking preceded the later viewpoint change.",
+    "consider": "Choose a cell boundary before a decision needing fresh model interpretation. Ask one observable distinction per question with unknown. Read the returned evidence and decide whether it changes the method, requires another observation or can be rejected.",
+    "boundary": "No fixed consultation frequency, short-cell rule or requirement to follow Jev is implied. Clear numerical feedback may be handled entirely in Python.",
+    "sources": [
+      "jev-84 Part A/B consultation trajectories",
+      "v3-168-20261106: play_Xylophone L1",
+      "log_261104.md",
+      "log_261107.md"
+    ],
+    "source_type": "historical_observation"
+  },
+  {
+    "id": "method_selection",
+    "title": "Change the mechanism when its assumptions fail",
+    "source_type": "authored_mechanism_guidance",
+    "applies": "Repeated grasp, route or effect failures; unfamiliar object interactions.",
+    "consider": "Separate task goal, proposed method and current motion. Ask what controls the relevant object degrees of freedom, what supports the receiver, and what evidence would distinguish the likely failure explanations. If control and support hold and a residual is observable, refine the parameter. Otherwise change the contact region, jaw direction, support, viewpoint, route or hand assignment. Compare the effect of that changed condition before committing the rest of the program. Independent unfinished objects can be considered when task order allows.",
+    "boundary": "Do not prescribe a retry count, require every alternative to be tried, or equate a long explanation with new evidence.",
+    "sources": [
+      "Native v4 strategy design; guidance is not a recorded successful trajectory"
+    ]
+  },
+  {
+    "id": "precision_engagement",
+    "title": "Control functional geometry for engagement",
+    "source_type": "authored_mechanism_guidance",
+    "applies": "Thin objects, holes, slots, plugs, tubes and keys.",
+    "consider": "Identify the entering feature, receiving opening, directed axes and available clearance. Distinguish the measured object feature from the constructed TCP target, retaining any object-to-hand relation as an assumption. Establish retention and receiver support. Use sourced lateral and angular residuals where observable; an occluded opening calls for a useful view, not an invented depth. After contact, distinguish partial entry, a rim collision, changed grasp and receiver displacement. A short diagnostic displacement is useful only when its visible outcomes distinguish these explanations. Update the relation after regrasp or slip; use the resulting physical effect to choose the next insertion or release.",
+    "boundary": "No fixed insertion depth, force estimate, contact threshold, hidden object pose or tightening turn count is supplied. A low ray-fit residual does not prove feature identity or insertion accuracy.",
+    "sources": [
+      "Native v4 strategy design; guidance is not a recorded successful trajectory"
+    ]
+  },
+  {
+    "id": "coupled_objects",
+    "title": "Plan support and both hand roles",
+    "source_type": "authored_mechanism_guidance",
+    "applies": "Assembly, opening and packing containers, tool storage and cross-arm transfer.",
+    "consider": "Plan how each involved object is supported throughout the operation. One hand can carry while another stabilizes or repositions a receiver; an existing support may make the second hand unnecessary. Check destination access and empty-hand withdrawal before committing a grasp. For a relay, consider a mutually reachable supported placement if allowed by the instruction, and re-establish current geometry after release. Preserve access to handles, openings and the next object instead of filling the nearest free region first. Reassess the hand roles when the chosen path is repeatedly obstructed.",
+    "boundary": "Do not force bimanual use, assume a container should always remain stationary, or replace an instructed hand-to-hand transfer with a table relay.",
+    "sources": [
+      "Native v4 strategy design; guidance is not a recorded successful trajectory"
+    ]
+  },
+  {
+    "id": "contents_transfer",
+    "title": "Track the opening and transferred contents",
+    "source_type": "authored_mechanism_guidance",
+    "applies": "Pouring liquids or granular contents into a receiver.",
+    "consider": "Separate vessel retention, source opening relative to receiver, tilt direction and actual transfer. Predict how the mouth moves under rotation, not only where the TCP goes. Choose a view exposing the mouth and receiving region; Jev can distinguish visible flow, spill and residual contents but does not measure invisible volume. Use staged changes in vessel orientation and compare actual transfer. If the receiver moves or the mouth leaves its useful region, revise support and relative geometry before assuming more tilt solves the problem. Retain enough control to restore the vessel and place it after transfer.",
+    "boundary": "No fixed pouring angle or duration guarantees transfer. Do not fabricate volume, flow or contact sensing; use only the instructed quantity and available observations.",
+    "sources": [
+      "Native v4 strategy design; guidance is not a recorded successful trajectory"
+    ]
+  },
+  {
+    "id": "contact_tools",
+    "title": "Learn the effect of a supported contact",
+    "source_type": "authored_mechanism_guidance",
+    "applies": "Sweeping, pushing, pressing and using a held tool.",
+    "consider": "Identify the working edge or point, its current relation to the hand, the target support and intended contact direction. For supported sliding, control the effective contact while leaving the object on its support. A short initial segment can distinguish whether the tool moves the target, slips, rotates, jams or misses. Measure the resulting target change where possible, then choose contact location and direction for the next correction. For repeated events, establish one observed actuation-and-release cycle before treating strokes as counted effects. Re-measure a held functional point after orientation or grip changes when the rigid assumption is uncertain.",
+    "boundary": "Do not impose a grasp-and-lift sequence on a sliding task. Reaching a planned pose or completing a stroke is not an observed target effect.",
+    "sources": [
+      "Native v4 strategy design; guidance is not a recorded successful trajectory"
+    ]
+  },
+  {
+    "id": "ordered_progress",
+    "title": "Retain task events and dependent relations",
+    "source_type": "authored_mechanism_guidance",
+    "applies": "Multi-object arrangements, observed demonstrations, repeated events and prescribed sequences.",
+    "consider": "Derive order, counts and references from this episode instruction and observations. Retain the identity of the current item, what event or relation was observed, its evidence and the next unresolved dependency. Distinguish commands attempted from events observed. Update affected entries after a disturbed support or ambiguous identity without restarting every verified item. When order is unconstrained, consider an independent unfinished subgoal while revising a blocked method. For prescribed order, resolve the current event before counting a later one as progress.",
+    "boundary": "Reference examples do not determine this episode sequence or counts. Do not infer hidden native progress counters or require all historically verified objects to remain visible simultaneously.",
+    "sources": [
+      "Native v4 strategy design; guidance is not a recorded successful trajectory"
+    ]
+  }
+]

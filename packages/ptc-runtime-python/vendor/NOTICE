@@ -1,0 +1,5 @@
+Derived components: JSON codec, protocol channel and namespace proxy from DeepSeek Harness Python PTC bootstrap.py.
+Source: https://github.com/deepseek-ai/deepseek-harness
+Retrieved 2026-10-27. Upstream MIT license is retained in LICENSE.
+The persistent cell driver and Node host originated in evo_v2.
+evo_v3 retains the imported primitives; the unused upstream standalone runner, log capture, resource-limit driver and protocol declarations have been removed.

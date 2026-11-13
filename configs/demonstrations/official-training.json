@@ -1,0 +1,1414 @@
+{
+  "schema_version": 2,
+  "repository": "RoboDojo-Benchmark/RoboDojo",
+  "revision": "1127bda94f172d757386945af3eb3a6754d1a4e6",
+  "license": "Apache-2.0",
+  "cameras": [
+    "cam_head",
+    "cam_left_wrist",
+    "cam_right_wrist"
+  ],
+  "curation": {
+    "listed_head_videos_per_task": 100,
+    "visually_reviewed_candidates_per_task": 3,
+    "selection": "Mid-range file-size candidates, measured duration and chronological visual inspection; clear stages and representative complementary layouts. Method notes are curator interpretations."
+  },
+  "without_demonstrations": [
+    "align_blocks",
+    "classify_objects_by_language",
+    "general_pickup",
+    "pick_from_conveyor_by_image",
+    "pour_by_language",
+    "solve_equation",
+    "stack_blocks_by_language",
+    "store_tools_in_toolbox"
+  ],
+  "tasks": [
+    {
+      "source_task": "arrange_largest_number",
+      "tasks": [
+        "arrange_largest_number",
+        "arrange_largest_number_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 99,
+          "frames": 563,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            80,
+            161,
+            321,
+            401,
+            562
+          ],
+          "selection_reason": "Both sequences show readable intermediate and final digits, with five-digit and four-digit examples providing useful variation.",
+          "method": "Recognize the live digits, order them descending, and place each upright on the corresponding pad using the reachable hand.",
+          "applicability": "Use the live digit identities and number of pads; the demonstrated digit values and count are not instructions."
+        },
+        {
+          "episode_index": 42,
+          "frames": 565,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            81,
+            161,
+            322,
+            403,
+            564
+          ],
+          "selection_reason": "Both sequences show readable intermediate and final digits, with five-digit and four-digit examples providing useful variation.",
+          "method": "Recognize the live digits, order them descending, and place each upright on the corresponding pad using the reachable hand.",
+          "applicability": "Use the live digit identities and number of pads; the demonstrated digit values and count are not instructions."
+        }
+      ]
+    },
+    {
+      "source_task": "build_tower",
+      "tasks": [
+        "build_tower"
+      ],
+      "episodes": [
+        {
+          "episode_index": 2,
+          "frames": 731,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            209,
+            313,
+            417,
+            521,
+            730
+          ],
+          "selection_reason": "Both show a complete stable multi-level structure and visible two-handed board support, with different scattered starting positions.",
+          "method": "Place the lower supports, lower the long board onto them with both hands, build the upper supports and shorter board, then add the plank and cap.",
+          "applicability": "Preserve support order and board orientation; ground every support location and grasp in the live arrangement."
+        },
+        {
+          "episode_index": 41,
+          "frames": 725,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            207,
+            310,
+            414,
+            517,
+            724
+          ],
+          "selection_reason": "Both show a complete stable multi-level structure and visible two-handed board support, with different scattered starting positions.",
+          "method": "Place the lower supports, lower the long board onto them with both hands, build the upper supports and shorter board, then add the plank and cap.",
+          "applicability": "Preserve support order and board orientation; ground every support location and grasp in the live arrangement."
+        }
+      ]
+    },
+    {
+      "source_task": "classify_objects",
+      "tasks": [
+        "classify_objects"
+      ],
+      "episodes": [
+        {
+          "episode_index": 54,
+          "frames": 599,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            85,
+            256,
+            342,
+            513,
+            598
+          ],
+          "selection_reason": "The two sequences give contrasting object sets and category-to-bin arrangements while showing orderly repeated pick/place operations and clear final bins.",
+          "method": "Identify the requested object categories and their live container assignments, then place objects into their assigned bins with reachable grasps.",
+          "applicability": "Bin colors are not permanent category labels: the two references have different object groups and arrangements."
+        },
+        {
+          "episode_index": 67,
+          "frames": 630,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            90,
+            270,
+            359,
+            539,
+            629
+          ],
+          "selection_reason": "The two sequences give contrasting object sets and category-to-bin arrangements while showing orderly repeated pick/place operations and clear final bins.",
+          "method": "Identify the requested object categories and their live container assignments, then place objects into their assigned bins with reachable grasps.",
+          "applicability": "Bin colors are not permanent category labels: the two references have different object groups and arrangements."
+        }
+      ]
+    },
+    {
+      "source_task": "cover_blocks",
+      "tasks": [
+        "cover_blocks"
+      ],
+      "episodes": [
+        {
+          "episode_index": 32,
+          "frames": 536,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            76,
+            229,
+            306,
+            382,
+            535
+          ],
+          "selection_reason": "Complete cover/uncover sequences with different initial color order; initial blocks and final revealed identities are clear.",
+          "method": "Remember each live block identity before covering; grasp and move covers without moving the blocks, then uncover according to the live instruction.",
+          "applicability": "Bind block identities and required reveal order from this episode, not reference colors or positions."
+        },
+        {
+          "episode_index": 18,
+          "frames": 541,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            77,
+            231,
+            309,
+            386,
+            540
+          ],
+          "selection_reason": "Complete cover/uncover sequences with different initial color order; initial blocks and final revealed identities are clear.",
+          "method": "Remember each live block identity before covering; grasp and move covers without moving the blocks, then uncover according to the live instruction.",
+          "applicability": "Bind block identities and required reveal order from this episode, not reference colors or positions."
+        }
+      ]
+    },
+    {
+      "source_task": "deposit_coin",
+      "tasks": [
+        "deposit_coin"
+      ],
+      "episodes": [
+        {
+          "episode_index": 62,
+          "frames": 196,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            56,
+            84,
+            111,
+            167,
+            195
+          ],
+          "selection_reason": "Selected opposing left/right layouts with visible coin handover and final cleared table. Candidate 70 visibly leaves an object at the original coin location and was not selected.",
+          "method": "Pick the coin, regrasp between hands to make its edge enter the slot, then lower and release into the piggy bank.",
+          "applicability": "Ground the live slot direction and coin plane; mirror hand roles when layout requires it."
+        },
+        {
+          "episode_index": 15,
+          "frames": 195,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            55,
+            83,
+            111,
+            166,
+            194
+          ],
+          "selection_reason": "Selected opposing left/right layouts with visible coin handover and final cleared table. Candidate 70 visibly leaves an object at the original coin location and was not selected.",
+          "method": "Pick the coin, regrasp between hands to make its edge enter the slot, then lower and release into the piggy bank.",
+          "applicability": "Ground the live slot direction and coin plane; mirror hand roles when layout requires it."
+        }
+      ]
+    },
+    {
+      "source_task": "fasten_screws",
+      "tasks": [
+        "fasten_screws"
+      ],
+      "episodes": [
+        {
+          "episode_index": 52,
+          "frames": 1369,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            195,
+            586,
+            782,
+            1173,
+            1368
+          ],
+          "selection_reason": "Different color and placement arrangements with sequential acquisition, alignment and completed pairs visible; durations are similar among the screened central-size candidates.",
+          "method": "Grasp the movable nut by its sides, orient its bore over the matching fixed bolt, and lower while preserving alignment before release.",
+          "applicability": "Match live colors and estimate actual bore/bolt alignment; reference motion duration does not establish engagement."
+        },
+        {
+          "episode_index": 5,
+          "frames": 1405,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            201,
+            602,
+            802,
+            1203,
+            1404
+          ],
+          "selection_reason": "Different color and placement arrangements with sequential acquisition, alignment and completed pairs visible; durations are similar among the screened central-size candidates.",
+          "method": "Grasp the movable nut by its sides, orient its bore over the matching fixed bolt, and lower while preserving alignment before release.",
+          "applicability": "Match live colors and estimate actual bore/bolt alignment; reference motion duration does not establish engagement."
+        }
+      ]
+    },
+    {
+      "source_task": "fill_egg_holder",
+      "tasks": [
+        "fill_egg_holder"
+      ],
+      "episodes": [
+        {
+          "episode_index": 12,
+          "frames": 366,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            52,
+            104,
+            209,
+            313,
+            365
+          ],
+          "selection_reason": "Opposing basket sides demonstrate mirrored arm use, individual egg transfers, progressive filling and final lid closure.",
+          "method": "Acquire eggs individually, lower into separate holder recesses, release after support, and close the lid after filling.",
+          "applicability": "Check live egg retention and seating rather than relying on overlap in a head view."
+        },
+        {
+          "episode_index": 49,
+          "frames": 390,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            56,
+            111,
+            222,
+            333,
+            389
+          ],
+          "selection_reason": "Opposing basket sides demonstrate mirrored arm use, individual egg transfers, progressive filling and final lid closure.",
+          "method": "Acquire eggs individually, lower into separate holder recesses, release after support, and close the lid after filling.",
+          "applicability": "Check live egg retention and seating rather than relying on overlap in a head view."
+        }
+      ]
+    },
+    {
+      "source_task": "fill_pen_holder",
+      "tasks": [
+        "fill_pen_holder"
+      ],
+      "episodes": [
+        {
+          "episode_index": 31,
+          "frames": 634,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            90,
+            181,
+            362,
+            543,
+            633
+          ],
+          "selection_reason": "Contrasting holder sides and object shapes show the support/manipulation division, repeated upright insertion and final release clearly.",
+          "method": "Stabilize the holder with one hand while the other grasps each elongated object, reorients it upright and inserts it into the opening.",
+          "applicability": "Use the live holder rim, object axis and free opening; hand roles depend on current layout."
+        },
+        {
+          "episode_index": 50,
+          "frames": 709,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            101,
+            202,
+            405,
+            607,
+            708
+          ],
+          "selection_reason": "Contrasting holder sides and object shapes show the support/manipulation division, repeated upright insertion and final release clearly.",
+          "method": "Stabilize the holder with one hand while the other grasps each elongated object, reorients it upright and inserts it into the opening.",
+          "applicability": "Use the live holder rim, object axis and free opening; hand roles depend on current layout."
+        }
+      ]
+    },
+    {
+      "source_task": "fold_clothes",
+      "tasks": [
+        "fold_clothes",
+        "fold_clothes_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 35,
+          "frames": 299,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            85,
+            128,
+            170,
+            213,
+            298
+          ],
+          "selection_reason": "Centered pink and rotated green garments provide contrasting appearance and orientation while showing sleeve folds, bilateral hem lifting and compact final folds.",
+          "method": "Fold the sleeves inward one at a time, then use both hands on the lower hem to bring it toward the shoulders and release the folded garment.",
+          "applicability": "Locate the actual sleeves, hem and shoulder edges; adapt to the garment orientation and deformation."
+        },
+        {
+          "episode_index": 20,
+          "frames": 303,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            86,
+            129,
+            173,
+            216,
+            302
+          ],
+          "selection_reason": "Centered pink and rotated green garments provide contrasting appearance and orientation while showing sleeve folds, bilateral hem lifting and compact final folds.",
+          "method": "Fold the sleeves inward one at a time, then use both hands on the lower hem to bring it toward the shoulders and release the folded garment.",
+          "applicability": "Locate the actual sleeves, hem and shoulder edges; adapt to the garment orientation and deformation."
+        }
+      ]
+    },
+    {
+      "source_task": "hang_mugs",
+      "tasks": [
+        "hang_mugs",
+        "hang_mugs_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 79,
+          "frames": 474,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            68,
+            135,
+            270,
+            405,
+            473
+          ],
+          "selection_reason": "Different rack positions and mug shapes show individual approaches, release onto separate pegs and all three mugs visibly hanging.",
+          "method": "Acquire a mug while leaving its handle accessible, orient the handle opening around a free rack peg, lower onto support and release before handling the next mug.",
+          "applicability": "Ground live handle openings and free pegs; contact visibility and support must be checked rather than copying cup colors or rack coordinates."
+        },
+        {
+          "episode_index": 66,
+          "frames": 551,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            79,
+            157,
+            314,
+            471,
+            550
+          ],
+          "selection_reason": "Different rack positions and mug shapes show individual approaches, release onto separate pegs and all three mugs visibly hanging.",
+          "method": "Acquire a mug while leaving its handle accessible, orient the handle opening around a free rack peg, lower onto support and release before handling the next mug.",
+          "applicability": "Ground live handle openings and free pegs; contact visibility and support must be checked rather than copying cup colors or rack coordinates."
+        }
+      ]
+    },
+    {
+      "source_task": "imitate_sorting_sequence",
+      "tasks": [
+        "imitate_sorting_sequence"
+      ],
+      "episodes": [
+        {
+          "episode_index": 72,
+          "frames": 1203,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            172,
+            343,
+            515,
+            859,
+            1202
+          ],
+          "selection_reason": "Both clearly separate the white demonstrator phase from the dual-arm reproduction phase and show different ordered object sets.",
+          "method": "Observe the live demonstrator sequence before acting, retain object identities and order, then move the corresponding objects to the recipient tray in that order.",
+          "applicability": "The reference sequence is an example of remembering and replaying; never substitute its object identities or order for the live demonstrator."
+        },
+        {
+          "episode_index": 55,
+          "frames": 1178,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            168,
+            336,
+            504,
+            841,
+            1177
+          ],
+          "selection_reason": "Both clearly separate the white demonstrator phase from the dual-arm reproduction phase and show different ordered object sets.",
+          "method": "Observe the live demonstrator sequence before acting, retain object identities and order, then move the corresponding objects to the recipient tray in that order.",
+          "applicability": "The reference sequence is an example of remembering and replaying; never substitute its object identities or order for the live demonstrator."
+        }
+      ]
+    },
+    {
+      "source_task": "insert_key",
+      "tasks": [
+        "insert_key"
+      ],
+      "episodes": [
+        {
+          "episode_index": 62,
+          "frames": 176,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            25,
+            75,
+            100,
+            150,
+            175
+          ],
+          "selection_reason": "Both compact sequences visibly show acquisition, supported handover, receiver reorientation and the lock approach; key and lock starting orientations vary.",
+          "method": "Acquire the key, hand it over to expose the entering blade, reorient the blade over the lock opening, then seat and turn while retaining it.",
+          "applicability": "The live key-to-gripper relation, slot plane and tooth direction must be measured; head-view overlap does not establish seating."
+        },
+        {
+          "episode_index": 20,
+          "frames": 177,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            25,
+            75,
+            101,
+            151,
+            176
+          ],
+          "selection_reason": "Both compact sequences visibly show acquisition, supported handover, receiver reorientation and the lock approach; key and lock starting orientations vary.",
+          "method": "Acquire the key, hand it over to expose the entering blade, reorient the blade over the lock opening, then seat and turn while retaining it.",
+          "applicability": "The live key-to-gripper relation, slot plane and tooth direction must be measured; head-view overlap does not establish seating."
+        }
+      ]
+    },
+    {
+      "source_task": "insert_tubes",
+      "tasks": [
+        "insert_tubes"
+      ],
+      "episodes": [
+        {
+          "episode_index": 17,
+          "frames": 323,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            46,
+            92,
+            184,
+            276,
+            322
+          ],
+          "selection_reason": "Complementary left/right starting distributions and rack orientations show repeated upright insertions with three tubes remaining supported in the rack.",
+          "method": "Pinch each tube by its body, align its long axis upright over a free rack hole, lower into support, and release before taking another tube.",
+          "applicability": "Use the current tube axis, hole positions and rack orientation; reference hole indices are not fixed assignments."
+        },
+        {
+          "episode_index": 60,
+          "frames": 319,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            45,
+            91,
+            182,
+            273,
+            318
+          ],
+          "selection_reason": "Complementary left/right starting distributions and rack orientations show repeated upright insertions with three tubes remaining supported in the rack.",
+          "method": "Pinch each tube by its body, align its long axis upright over a free rack hole, lower into support, and release before taking another tube.",
+          "applicability": "Use the current tube axis, hole positions and rack orientation; reference hole indices are not fixed assignments."
+        }
+      ]
+    },
+    {
+      "source_task": "make_kong",
+      "tasks": [
+        "make_kong"
+      ],
+      "episodes": [
+        {
+          "episode_index": 72,
+          "frames": 370,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            53,
+            105,
+            158,
+            264,
+            369
+          ],
+          "selection_reason": "The matching triplet appears on different sides of the row, demonstrating different hand use, exposure, discard collection and replacement rather than one fixed target location.",
+          "method": "Observe the live discard, identify its matching triplet, expose those tiles individually, collect the matching discard and handle the replacement tile while preserving the remaining upright row.",
+          "applicability": "Choose tile identities from the live discard and manage contact separation in the current row; a reference push is not evidence that neighboring tiles will remain stable."
+        },
+        {
+          "episode_index": 55,
+          "frames": 371,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            53,
+            106,
+            159,
+            264,
+            370
+          ],
+          "selection_reason": "The matching triplet appears on different sides of the row, demonstrating different hand use, exposure, discard collection and replacement rather than one fixed target location.",
+          "method": "Observe the live discard, identify its matching triplet, expose those tiles individually, collect the matching discard and handle the replacement tile while preserving the remaining upright row.",
+          "applicability": "Choose tile identities from the live discard and manage contact separation in the current row; a reference push is not evidence that neighboring tiles will remain stable."
+        }
+      ]
+    },
+    {
+      "source_task": "make_toast",
+      "tasks": [
+        "make_toast",
+        "make_toast_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 60,
+          "frames": 523,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            75,
+            149,
+            224,
+            373,
+            522
+          ],
+          "selection_reason": "Opposite toaster/rack arrangements show clear bread extraction and handover, two distinct slot insertions and visible final rack/toaster arrangement.",
+          "method": "Extract a bread slice, regrasp if needed so its thin edge aligns with a toaster slot, seat one slice in each slot, then operate the lever while preserving the remaining rack slices.",
+          "applicability": "Adapt grasp and handover to the live rack and toaster orientation; actuate the lever only after actual seating."
+        },
+        {
+          "episode_index": 47,
+          "frames": 665,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            95,
+            190,
+            285,
+            474,
+            664
+          ],
+          "selection_reason": "Opposite toaster/rack arrangements show clear bread extraction and handover, two distinct slot insertions and visible final rack/toaster arrangement.",
+          "method": "Extract a bread slice, regrasp if needed so its thin edge aligns with a toaster slot, seat one slice in each slot, then operate the lever while preserving the remaining rack slices.",
+          "applicability": "Adapt grasp and handover to the live rack and toaster orientation; actuate the lever only after actual seating."
+        }
+      ]
+    },
+    {
+      "source_task": "match_and_pick_from_conveyor",
+      "tasks": [
+        "match_and_pick_from_conveyor"
+      ],
+      "episodes": [
+        {
+          "episode_index": 23,
+          "frames": 455,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            130,
+            195,
+            324,
+            389,
+            454
+          ],
+          "selection_reason": "Patterned-cup and patterned-plate targets provide different shapes and distractors, with visible target presentation, belt passage and final lifted matching object.",
+          "method": "Remember the displayed target appearance, track matching objects as the conveyor brings them into reach, then grasp and lift the matching item rather than a distractor.",
+          "applicability": "Target identity and interception timing come from the live episode; sample times are not conveyor-control instructions."
+        },
+        {
+          "episode_index": 95,
+          "frames": 460,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            131,
+            197,
+            328,
+            393,
+            459
+          ],
+          "selection_reason": "Patterned-cup and patterned-plate targets provide different shapes and distractors, with visible target presentation, belt passage and final lifted matching object.",
+          "method": "Remember the displayed target appearance, track matching objects as the conveyor brings them into reach, then grasp and lift the matching item rather than a distractor.",
+          "applicability": "Target identity and interception timing come from the live episode; sample times are not conveyor-control instructions."
+        }
+      ]
+    },
+    {
+      "source_task": "organize_table",
+      "tasks": [
+        "organize_table"
+      ],
+      "episodes": [
+        {
+          "episode_index": 37,
+          "frames": 493,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            70,
+            211,
+            281,
+            422,
+            492
+          ],
+          "selection_reason": "The chosen sequences show distinct figurine/keyboard layouts, individual accessory placement and two-handed keyboard transport to a straight final placement. Candidate 51 ends with a visibly angled keyboard and was not selected.",
+          "method": "Place the figurine on its stand and the clock on the drawer, position the mouse on its pad, then use bilateral support to move and align the keyboard with its target region.",
+          "applicability": "Use live target regions and required orientations; keep the placed objects supported while moving larger items."
+        },
+        {
+          "episode_index": 79,
+          "frames": 724,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            103,
+            310,
+            413,
+            620,
+            723
+          ],
+          "selection_reason": "The chosen sequences show distinct figurine/keyboard layouts, individual accessory placement and two-handed keyboard transport to a straight final placement. Candidate 51 ends with a visibly angled keyboard and was not selected.",
+          "method": "Place the figurine on its stand and the clock on the drawer, position the mouse on its pad, then use bilateral support to move and align the keyboard with its target region.",
+          "applicability": "Use live target regions and required orientations; keep the placed objects supported while moving larger items."
+        }
+      ]
+    },
+    {
+      "source_task": "pack_objects_into_box",
+      "tasks": [
+        "pack_objects_into_box",
+        "pack_objects_into_box_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 28,
+          "frames": 833,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            227,
+            303,
+            529,
+            756,
+            832
+          ],
+          "selection_reason": "Both show distinct tool, toy and shoe transfers ending with the objects visibly inside the box; candidate 77 has less clear final containment for the toy. Complementary object layouts and 33-38 s sequences.",
+          "method": "Choose an accessible grasp on each object, lift clear of the rim, place into the open box, release and withdraw before the next object.",
+          "applicability": "Ground the live object list and box opening; do not copy reference object order or assume containment while the gripper occludes the box."
+        },
+        {
+          "episode_index": 95,
+          "frames": 961,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            175,
+            349,
+            698,
+            873,
+            960
+          ],
+          "selection_reason": "Both show distinct tool, toy and shoe transfers ending with the objects visibly inside the box; candidate 77 has less clear final containment for the toy. Complementary object layouts and 33-38 s sequences.",
+          "method": "Choose an accessible grasp on each object, lift clear of the rim, place into the open box, release and withdraw before the next object.",
+          "applicability": "Ground the live object list and box opening; do not copy reference object order or assume containment while the gripper occludes the box."
+        }
+      ]
+    },
+    {
+      "source_task": "play_Xylophone",
+      "tasks": [
+        "play_Xylophone"
+      ],
+      "episodes": [
+        {
+          "episode_index": 50,
+          "frames": 309,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            56,
+            112,
+            168,
+            196,
+            280,
+            308
+          ],
+          "selection_reason": "All three candidates last about 12 s; these two provide different initial mallet orientations with visible grasp, striking, transfer, and opposite-hand continuation.",
+          "method": "Acquire the mallet by its shaft, use the head to contact keys, transfer the shaft between hands when needed, and continue controlled strikes.",
+          "applicability": "Follow the live required note order and hand-use instruction; visible key contact does not by itself certify an audible or scored strike."
+        },
+        {
+          "episode_index": 60,
+          "frames": 311,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            56,
+            113,
+            169,
+            197,
+            282,
+            310
+          ],
+          "selection_reason": "All three candidates last about 12 s; these two provide different initial mallet orientations with visible grasp, striking, transfer, and opposite-hand continuation.",
+          "method": "Acquire the mallet by its shaft, use the head to contact keys, transfer the shaft between hands when needed, and continue controlled strikes.",
+          "applicability": "Follow the live required note order and hand-use instruction; visible key contact does not by itself certify an audible or scored strike."
+        }
+      ]
+    },
+    {
+      "source_task": "play_stacking_toy",
+      "tasks": [
+        "play_stacking_toy"
+      ],
+      "episodes": [
+        {
+          "episode_index": 2,
+          "frames": 918,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            167,
+            333,
+            584,
+            750,
+            917
+          ],
+          "selection_reason": "Both are approximately 37 s with clear successive filled peg positions and final board state; they show complementary shape ordering, while candidate 63 repeats the second order with more arm occlusion.",
+          "method": "Grasp each shape at an accessible outer edge, align its hole above the matching peg, lower onto support and release before progressing.",
+          "applicability": "Identify the live shape and peg correspondence and account for the held-object offset; reference color or ordering is not a fixed instruction."
+        },
+        {
+          "episode_index": 49,
+          "frames": 932,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            169,
+            339,
+            592,
+            846,
+            931
+          ],
+          "selection_reason": "Both are approximately 37 s with clear successive filled peg positions and final board state; they show complementary shape ordering, while candidate 63 repeats the second order with more arm occlusion.",
+          "method": "Grasp each shape at an accessible outer edge, align its hole above the matching peg, lower onto support and release before progressing.",
+          "applicability": "Identify the live shape and peg correspondence and account for the held-object offset; reference color or ordering is not a fixed instruction."
+        }
+      ]
+    },
+    {
+      "source_task": "play_tic_tac_toe",
+      "tasks": [
+        "play_tic_tac_toe"
+      ],
+      "episodes": [
+        {
+          "episode_index": 4,
+          "frames": 855,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            78,
+            155,
+            311,
+            466,
+            699,
+            854
+          ],
+          "selection_reason": "Both last about 35 s and show clear alternating player/opponent placements with different first player cells. Candidate 24 is similar but more of its intermediate placements are arm-occluded.",
+          "method": "Read the current board after the opponent withdraws, acquire an unused own piece, place into the selected empty cell, and clear the board for the opponent.",
+          "applicability": "Choose moves from the live board and rules; never replay reference cell order or opponent moves."
+        },
+        {
+          "episode_index": 98,
+          "frames": 871,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            79,
+            158,
+            316,
+            475,
+            712,
+            870
+          ],
+          "selection_reason": "Both last about 35 s and show clear alternating player/opponent placements with different first player cells. Candidate 24 is similar but more of its intermediate placements are arm-occluded.",
+          "method": "Read the current board after the opponent withdraws, acquire an unused own piece, place into the selected empty cell, and clear the board for the opponent.",
+          "applicability": "Choose moves from the live board and rules; never replay reference cell order or opponent moves."
+        }
+      ]
+    },
+    {
+      "source_task": "plug_in_charger",
+      "tasks": [
+        "plug_in_charger"
+      ],
+      "episodes": [
+        {
+          "episode_index": 44,
+          "frames": 202,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            37,
+            73,
+            128,
+            164,
+            201
+          ],
+          "selection_reason": "Candidate 44 provides a clear approximately 8 s pickup-handover-insertion sequence; 78 complements it with opposite pickup side and a longer regrasp sequence. Candidate 85 has poorer initial socket separation from the parked arm.",
+          "method": "Acquire the charger body, transfer or regrasp to expose its insertion end, align with the socket, seat and release while preserving the socket support.",
+          "applicability": "Resolve live plug orientation and socket alignment; reference hand assignment depends on object position and task requirements."
+        },
+        {
+          "episode_index": 78,
+          "frames": 272,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            49,
+            99,
+            148,
+            197,
+            246,
+            271
+          ],
+          "selection_reason": "Candidate 44 provides a clear approximately 8 s pickup-handover-insertion sequence; 78 complements it with opposite pickup side and a longer regrasp sequence. Candidate 85 has poorer initial socket separation from the parked arm.",
+          "method": "Acquire the charger body, transfer or regrasp to expose its insertion end, align with the socket, seat and release while preserving the socket support.",
+          "applicability": "Resolve live plug orientation and socket alignment; reference hand assignment depends on object position and task requirements."
+        }
+      ]
+    },
+    {
+      "source_task": "pour_balls_into_vase",
+      "tasks": [
+        "pour_balls_into_vase"
+      ],
+      "episodes": [
+        {
+          "episode_index": 95,
+          "frames": 287,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            52,
+            78,
+            130,
+            182,
+            286
+          ],
+          "selection_reason": "These 11-13 s sequences show a narrow dark vase with direct acquisition and a wider white vase with handover, followed by controlled tilt and cup replacement. Candidate 99 repeats the handover with greater pouring occlusion.",
+          "method": "Retain the source cup, transfer if needed for access, position its lip above the vase opening, tilt to discharge, then restore and set down.",
+          "applicability": "Ground the live vase opening and source lip; these sampled images show the container method, not complete visibility of every ball entering."
+        },
+        {
+          "episode_index": 55,
+          "frames": 322,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            58,
+            117,
+            146,
+            233,
+            321
+          ],
+          "selection_reason": "These 11-13 s sequences show a narrow dark vase with direct acquisition and a wider white vase with handover, followed by controlled tilt and cup replacement. Candidate 99 repeats the handover with greater pouring occlusion.",
+          "method": "Retain the source cup, transfer if needed for access, position its lip above the vase opening, tilt to discharge, then restore and set down.",
+          "applicability": "Ground the live vase opening and source lip; these sampled images show the container method, not complete visibility of every ball entering."
+        }
+      ]
+    },
+    {
+      "source_task": "pour_liquid_into_cup",
+      "tasks": [
+        "pour_liquid_into_cup",
+        "pour_liquid_into_cup_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 59,
+          "frames": 235,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            43,
+            64,
+            106,
+            170,
+            213,
+            234
+          ],
+          "selection_reason": "Approximately 9-10 s examples provide clear side acquisition, mouth approach, progressive tilt, visible filled cup and upright restoration; the shorter candidate 17 spends less of the overview on the approach-to-flow transition.",
+          "method": "Grip the bottle body from the side, transport its mouth above the cup, tilt around that mouth while retaining the bottle, then restore upright.",
+          "applicability": "Use live mouth and cup geometry and feasible tilt direction; source opacity can hide remaining liquid, so do not infer complete transfer from bottle angle alone."
+        },
+        {
+          "episode_index": 54,
+          "frames": 249,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            45,
+            68,
+            113,
+            180,
+            225,
+            248
+          ],
+          "selection_reason": "Approximately 9-10 s examples provide clear side acquisition, mouth approach, progressive tilt, visible filled cup and upright restoration; the shorter candidate 17 spends less of the overview on the approach-to-flow transition.",
+          "method": "Grip the bottle body from the side, transport its mouth above the cup, tilt around that mouth while retaining the bottle, then restore upright.",
+          "applicability": "Use live mouth and cup geometry and feasible tilt direction; source opacity can hide remaining liquid, so do not infer complete transfer from bottle angle alone."
+        }
+      ]
+    },
+    {
+      "source_task": "press_by_number",
+      "tasks": [
+        "press_by_number"
+      ],
+      "episodes": [
+        {
+          "episode_index": 66,
+          "frames": 365,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            66,
+            132,
+            165,
+            232,
+            331,
+            364
+          ],
+          "selection_reason": "The 15-16 s examples expose different initial first numbers and the repeated left/center button phase separated by right-button confirmations; candidate 84 adds similar repetitions without a new visible mechanism.",
+          "method": "Read and retain the live number, use separated press-and-release strokes on its associated button, then press the confirmation button before proceeding to the next number.",
+          "applicability": "Count completed live strokes from actual feedback and use current numbers, not the reference counts; sparse overview frames do not enumerate every press."
+        },
+        {
+          "episode_index": 27,
+          "frames": 393,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            71,
+            143,
+            178,
+            249,
+            356,
+            392
+          ],
+          "selection_reason": "The 15-16 s examples expose different initial first numbers and the repeated left/center button phase separated by right-button confirmations; candidate 84 adds similar repetitions without a new visible mechanism.",
+          "method": "Read and retain the live number, use separated press-and-release strokes on its associated button, then press the confirmation button before proceeding to the next number.",
+          "applicability": "Count completed live strokes from actual feedback and use current numbers, not the reference counts; sparse overview frames do not enumerate every press."
+        }
+      ]
+    },
+    {
+      "source_task": "push_T",
+      "tasks": [
+        "push_T",
+        "push_T_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 0,
+          "frames": 359,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            65,
+            130,
+            195,
+            260,
+            358
+          ],
+          "selection_reason": "The selected 10-14 s examples complement a one-arm local alignment and a larger transfer with hand-side change. Candidate 14 ends close to the parked arm with poorer visibility of the final target relation.",
+          "method": "Contact the T piece from a side that produces the desired translation or rotation, disengage to change contact side, and compare its directed shape with the target.",
+          "applicability": "The live instruction governs allowed contact tools and grasping; derive target pose and push direction from the current scene rather than copying contact coordinates."
+        },
+        {
+          "episode_index": 53,
+          "frames": 253,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            46,
+            92,
+            115,
+            183,
+            252
+          ],
+          "selection_reason": "The selected 10-14 s examples complement a one-arm local alignment and a larger transfer with hand-side change. Candidate 14 ends close to the parked arm with poorer visibility of the final target relation.",
+          "method": "Contact the T piece from a side that produces the desired translation or rotation, disengage to change contact side, and compare its directed shape with the target.",
+          "applicability": "The live instruction governs allowed contact tools and grasping; derive target pose and push direction from the current scene rather than copying contact coordinates."
+        }
+      ]
+    },
+    {
+      "source_task": "put_bottles_into_dustbin",
+      "tasks": [
+        "put_bottles_into_dustbin"
+      ],
+      "episodes": [
+        {
+          "episode_index": 24,
+          "frames": 402,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            36,
+            109,
+            182,
+            219,
+            328,
+            401
+          ],
+          "selection_reason": "Both are about 16 s and clearly show repeated disposal and receiving-hand retention before donor release. Candidate 24 includes a lying bottle, while 56 shows mostly upright bottles; candidate 70 is less complementary.",
+          "method": "Acquire an accessible bottle body, hand it to the bin-side hand when needed, carry beyond the bin opening and release before returning for the next bottle.",
+          "applicability": "Confirm live bottle retention and donor separation during transfer; distinguish release over the opening from dropping against the rim."
+        },
+        {
+          "episode_index": 56,
+          "frames": 405,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            73,
+            147,
+            220,
+            331,
+            404
+          ],
+          "selection_reason": "Both are about 16 s and clearly show repeated disposal and receiving-hand retention before donor release. Candidate 24 includes a lying bottle, while 56 shows mostly upright bottles; candidate 70 is less complementary.",
+          "method": "Acquire an accessible bottle body, hand it to the bin-side hand when needed, carry beyond the bin opening and release before returning for the next bottle.",
+          "applicability": "Confirm live bottle retention and donor separation during transfer; distinguish release over the opening from dropping against the rim."
+        }
+      ]
+    },
+    {
+      "source_task": "sort_nesting_dolls_by_size",
+      "tasks": [
+        "sort_nesting_dolls_by_size",
+        "sort_nesting_dolls_by_size_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 15,
+          "frames": 552,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            100,
+            200,
+            301,
+            401,
+            551
+          ],
+          "selection_reason": "The 22-25 s examples show visible progressive sorted rows and complementary bright and dark doll appearances. Candidate 48 repeats the darker set with more arm occlusion and longer transport.",
+          "method": "Compare live doll sizes, reserve ordered tabletop locations, then grasp and place each doll upright while preserving the completed prefix.",
+          "applicability": "Use live relative size and requested sort direction; do not copy colors, fixed positions or the reference sequence."
+        },
+        {
+          "episode_index": 61,
+          "frames": 616,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            112,
+            224,
+            335,
+            503,
+            615
+          ],
+          "selection_reason": "The 22-25 s examples show visible progressive sorted rows and complementary bright and dark doll appearances. Candidate 48 repeats the darker set with more arm occlusion and longer transport.",
+          "method": "Compare live doll sizes, reserve ordered tabletop locations, then grasp and place each doll upright while preserving the completed prefix.",
+          "applicability": "Use live relative size and requested sort direction; do not copy colors, fixed positions or the reference sequence."
+        }
+      ]
+    },
+    {
+      "source_task": "stack_blocks",
+      "tasks": [
+        "stack_blocks",
+        "stack_blocks_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 57,
+          "frames": 259,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            47,
+            70,
+            141,
+            211,
+            258
+          ],
+          "selection_reason": "Both last about 10.5 s with clear individual pickups, two stacking stages and a visible final tower. Their contrasting colored blocks are easier to track than the mostly beige candidate 75.",
+          "method": "Establish the base on a stable support, place subsequent blocks centrally with level faces, release and withdraw vertically between layers.",
+          "applicability": "Ground live layer order, block sizes and stack height; arm arrival alone does not prove supported placement."
+        },
+        {
+          "episode_index": 2,
+          "frames": 266,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            48,
+            72,
+            145,
+            217,
+            265
+          ],
+          "selection_reason": "Both last about 10.5 s with clear individual pickups, two stacking stages and a visible final tower. Their contrasting colored blocks are easier to track than the mostly beige candidate 75.",
+          "method": "Establish the base on a stable support, place subsequent blocks centrally with level faces, release and withdraw vertically between layers.",
+          "applicability": "Ground live layer order, block sizes and stack height; arm arrival alone does not prove supported placement."
+        }
+      ]
+    },
+    {
+      "source_task": "stack_bowls",
+      "tasks": [
+        "stack_bowls",
+        "stack_bowls_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 72,
+          "frames": 432,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            78,
+            157,
+            196,
+            313,
+            431
+          ],
+          "selection_reason": "The 17-19 s sequences show rim acquisition, first supported nest and second nest with contrasting bowl appearances and hand roles. Candidate 78 takes longer and spends more frames repositioning before the first nest.",
+          "method": "Pinch an accessible rim with fingers spanning its inner and outer sides, retain the opening-up bowl, align it over the receiving bowl, lower, release and withdraw before the next transfer.",
+          "applicability": "Use the live rim, bowl depth and held-object offset; confirm nested support after release rather than assuming TCP arrival means nesting."
+        },
+        {
+          "episode_index": 66,
+          "frames": 468,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            85,
+            170,
+            255,
+            340,
+            467
+          ],
+          "selection_reason": "The 17-19 s sequences show rim acquisition, first supported nest and second nest with contrasting bowl appearances and hand roles. Candidate 78 takes longer and spends more frames repositioning before the first nest.",
+          "method": "Pinch an accessible rim with fingers spanning its inner and outer sides, retain the opening-up bowl, align it over the receiving bowl, lower, release and withdraw before the next transfer.",
+          "applicability": "Use the live rim, bowl depth and held-object offset; confirm nested support after release rather than assuming TCP arrival means nesting."
+        }
+      ]
+    },
+    {
+      "source_task": "store_laptop_and_headphones",
+      "tasks": [
+        "store_laptop_and_headphones",
+        "store_laptop_and_headphones_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 79,
+          "frames": 483,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            88,
+            175,
+            307,
+            351,
+            438,
+            482
+          ],
+          "selection_reason": "The 19-21 s examples clearly show headphones hanging, laptop closure, lifting/handover and upright storage. Candidate 21 is longer and its closing stage moves the base more, making the intended hinge operation less clear.",
+          "method": "Hang the headphones by the headband, close the laptop while preserving base support, acquire the closed body, transfer or reorient for the storage stand, then seat and release.",
+          "applicability": "Resolve the live hinge, headband contact and stand slot; do not treat laptop closure or insertion as established while the supporting relation is occluded."
+        },
+        {
+          "episode_index": 62,
+          "frames": 517,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            94,
+            188,
+            328,
+            375,
+            469,
+            516
+          ],
+          "selection_reason": "The 19-21 s examples clearly show headphones hanging, laptop closure, lifting/handover and upright storage. Candidate 21 is longer and its closing stage moves the base more, making the intended hinge operation less clear.",
+          "method": "Hang the headphones by the headband, close the laptop while preserving base support, acquire the closed body, transfer or reorient for the storage stand, then seat and release.",
+          "applicability": "Resolve the live hinge, headband contact and stand slot; do not treat laptop closure or insertion as established while the supporting relation is occluded."
+        }
+      ]
+    },
+    {
+      "source_task": "swap_T",
+      "tasks": [
+        "swap_T"
+      ],
+      "episodes": [
+        {
+          "episode_index": 63,
+          "frames": 275,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            50,
+            125,
+            174,
+            199,
+            274
+          ],
+          "selection_reason": "Both are approximately 11 s with visible initial directed shapes, two independently retained pieces, sequential release and clear final swapped poses. Their differing initial orientations are more complementary than candidate 44.",
+          "method": "Record both directed target poses, allocate one hand to each piece, lift and park both to clear the destinations, then rotate and place each into the other original pose.",
+          "applicability": "Ground the live directed T axes and retained grasp offsets; preserve target identity through occlusion and do not infer full orientation from an undirected bounding box."
+        },
+        {
+          "episode_index": 6,
+          "frames": 276,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            50,
+            125,
+            175,
+            200,
+            275
+          ],
+          "selection_reason": "Both are approximately 11 s with visible initial directed shapes, two independently retained pieces, sequential release and clear final swapped poses. Their differing initial orientations are more complementary than candidate 44.",
+          "method": "Record both directed target poses, allocate one hand to each piece, lift and park both to clear the destinations, then rotate and place each into the other original pose.",
+          "applicability": "Ground the live directed T axes and retained grasp offsets; preserve target identity through occlusion and do not infer full orientation from an undirected bounding box."
+        }
+      ]
+    },
+    {
+      "source_task": "swap_blocks",
+      "tasks": [
+        "swap_blocks"
+      ],
+      "episodes": [
+        {
+          "episode_index": 0,
+          "frames": 444,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            81,
+            121,
+            201,
+            282,
+            443
+          ],
+          "selection_reason": "Both are approximately 18 s and expose different initially empty slots, intermediate moves and button confirmations. Candidate 5 repeats candidate 52 initial occupancy with more left-arm crossing.",
+          "method": "Record initial object identities and target slots, use the empty support as a temporary buffer, move one block at a time and perform the required confirmation between stages.",
+          "applicability": "Track identity by the actual live moves even if blocks look identical; the reference occupancy pattern and confirmation timing are not a replacement for the live instruction."
+        },
+        {
+          "episode_index": 52,
+          "frames": 436,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            79,
+            119,
+            198,
+            277,
+            435
+          ],
+          "selection_reason": "Both are approximately 18 s and expose different initially empty slots, intermediate moves and button confirmations. Candidate 5 repeats candidate 52 initial occupancy with more left-arm crossing.",
+          "method": "Record initial object identities and target slots, use the empty support as a temporary buffer, move one block at a time and perform the required confirmation between stages.",
+          "applicability": "Track identity by the actual live moves even if blocks look identical; the reference occupancy pattern and confirmation timing are not a replacement for the live instruction."
+        }
+      ]
+    },
+    {
+      "source_task": "sweep_blocks",
+      "tasks": [
+        "sweep_blocks",
+        "sweep_blocks_random"
+      ],
+      "episodes": [
+        {
+          "episode_index": 69,
+          "frames": 545,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            99,
+            148,
+            247,
+            346,
+            445,
+            544
+          ],
+          "selection_reason": "The 22-24 s examples clearly show brush handover, pan acquisition, repeated sweep strokes and final collected blocks, with complementary block counts and pan orientations. Candidate 63 is longer with less compact block grouping.",
+          "method": "Acquire and orient the brush, transfer it if needed, hold the dustpan opening against the work surface, sweep blocks through that opening in controlled strokes, then release the tools clear.",
+          "applicability": "Re-ground live brush bristles, pan lip and block positions; maintain a receiving support and do not reuse the reference stroke count or spatial path."
+        },
+        {
+          "episode_index": 76,
+          "frames": 596,
+          "fps": 25.0,
+          "overview_frames": [
+            0,
+            108,
+            162,
+            270,
+            379,
+            487,
+            595
+          ],
+          "selection_reason": "The 22-24 s examples clearly show brush handover, pan acquisition, repeated sweep strokes and final collected blocks, with complementary block counts and pan orientations. Candidate 63 is longer with less compact block grouping.",
+          "method": "Acquire and orient the brush, transfer it if needed, hold the dustpan opening against the work surface, sweep blocks through that opening in controlled strokes, then release the tools clear.",
+          "applicability": "Re-ground live brush bristles, pan lip and block positions; maintain a receiving support and do not reuse the reference stroke count or spatial path."
+        }
+      ]
+    }
+  ]
+}

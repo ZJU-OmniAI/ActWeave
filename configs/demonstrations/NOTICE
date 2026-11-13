@@ -1,0 +1,12 @@
+Official training video references
+
+Source: https://huggingface.co/datasets/RoboDojo-Benchmark/RoboDojo
+Revision: 1127bda94f172d757386945af3eb3a6754d1a4e6
+The dataset card declares Apache-2.0. See LICENSE in this directory.
+Source paths: data/RoboDojo/<source_task>/arx_x5/preview_video/
+              episode_<episode_index:07d>_<camera>.mp4
+
+The packaged videos are unmodified source preview videos. The fixed selection,
+overview frame indices, method notes and applicability notes are provided by
+Oh My Evo. These annotations are interpretations, not source expert reasoning
+or ground-truth success labels.

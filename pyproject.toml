@@ -1,0 +1,6 @@
+[project]
+name = "actweave-agent"
+version = "0.4.0"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "opencv-python-headless", "pillow", "fastapi", "uvicorn", "timm>=1.0.17", "einops", "iopath>=0.1.10", "ftfy==6.1.1", "pycocotools", "huggingface-hub", "pyyaml"]
