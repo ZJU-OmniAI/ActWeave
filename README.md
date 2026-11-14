@@ -9,6 +9,7 @@
 <p align="center">
   <a href="#overview">Overview</a> &middot;
   <a href="#method">Method</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#demonstration">Demo</a> &middot;
   <a href="#getting-started">Getting Started</a>
 </p>
@@ -32,6 +33,23 @@ ActWeave connects three stages to turn physical goals into executable operations
 ![ActWeave Agent architecture: grounded intent and geometric binding drive persistent Python, while execution receipts and observations return to Astra for effect reconciliation.](media/actweave_architecture.png)
 
 In ActWeave Agent, **Effect Threads give Astra an operation-level control structure that spans successive decisions**. Astra uses this structure to plan, generate programs, and choose observation and recovery strategies. Persistent Python executes geometric computation, motion, and numerical branches, while Jev supplies visual advice. Linked execution receipts and observation evidence return to Astra to inform the next operation revision. The bowl-stacking sequence illustrates this thread extending from acquisition through transport to supported placement.
+
+## Results
+
+On a fixed 168-case evaluation spanning **all 42 RoboDojo tasks and five capability dimensions**, ActWeave achieves **47.71% SR** and **55.49 Score**, improving over Baseline by **6.67 percentage points** and **8.08 points**, respectively.
+
+| Dimension | Baseline SR (%) | ActWeave SR (%) | Baseline Score | ActWeave Score |
+|:---|---:|---:|---:|---:|
+| Generalization | 20.83 | 45.83 | 23.75 | 49.58 |
+| Precision | 25.00 | 31.25 | 32.81 | 40.78 |
+| Long-Horizon | 25.00 | 25.00 | 42.81 | 49.22 |
+| Memory | 75.00 | 83.33 | 76.25 | 83.33 |
+| Open | 59.38 | 53.13 | 61.41 | 54.53 |
+| **Overall** | **41.04** | **47.71** | **47.41** | **55.49** |
+
+<img src="media/robodojo_results.svg" alt="Baseline and ActWeave success rates and task scores across five RoboDojo dimensions and the equal-weight overall result, with 168 cases per method." width="100%">
+
+Both methods use the same four fixed seed-0 cases per task, including two standard and two randomized cases for Generalization. **We will report results on the full 2,100-case evaluation, covering 50 cases per task, in a future update.**
 
 ## Demonstration
 
