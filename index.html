@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ActWeave: Effect-Threaded Programming for Embodied Control. Connecting operation intent, executable programs, and physical effect evidence.">
+  <title>ActWeave</title>
+  <link rel="icon" href="assets/media/logo.svg" type="image/svg+xml">
+  <script src="assets/js/theme.js"></script>
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/vendor/elastistack/component.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/theme-switch.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-type" viewBox="0 0 24 24"><path d="M3 5h18M12 5v15M8 20h8M3 5v3m18-3v3"/></symbol>
+    <symbol id="i-color" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="6" y="4" width="14" height="17" rx="3"/><path d="M3 16 1 5a3 3 0 0 1 2-3l9-1"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-intent" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 5-6 7 6 7m8-14 6 7-6 7M14 3l-4 18"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 14 4-4m-6 7-2 2a4 4 0 0 1-6-6l6-6a4 4 0 0 1 6 0m0 0 2-2a4 4 0 0 1 6 6l-6 6a4 4 0 0 1-6 0" transform="translate(2 0)"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v18h17M4 6h10M4 11h16M4 16h7"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 6h4l2-3h6l2 3h4v15H3Z"/><circle cx="12" cy="13" r="4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m2 7 10-5 10 5-10 5Zm0 5 10 5 10-5M2 17l10 5 10-5"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <aside class="rail" aria-label="Page navigation">
+    <a class="wordmark" href="#overview" aria-label="ActWeave home"><img class="logo-light" src="assets/media/logo.svg" width="64" height="64" alt=""><img class="logo-dark" src="assets/media/actweave-icon-theme-dark.svg" width="64" height="64" alt=""></a>
+    <nav>
+      <a class="rail-link active" href="#overview" aria-current="location"><svg aria-hidden="true"><use href="#i-grid"/></svg><span>Overview</span></a>
+      <a class="rail-link" href="#method"><svg aria-hidden="true"><use href="#i-link"/></svg><span>Method</span></a>
+      <a class="rail-link" href="#results"><svg aria-hidden="true"><use href="#i-chart"/></svg><span>Results</span></a>
+      <a class="rail-link" href="#cases"><svg aria-hidden="true"><use href="#i-camera"/></svg><span>Cases</span></a>
+      <a class="rail-link" href="#components"><svg aria-hidden="true"><use href="#i-layers"/></svg><span>Components</span></a>
+    </nav>
+    <div class="rail-theme">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><span class="sky" aria-hidden="true"><span class="sun-moon"><i></i><i></i><i></i></span><span class="halo h1"></span><span class="halo h2"></span><span class="halo h3"></span><span class="clouds back"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="clouds front"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="stars"><i></i><i></i><i></i><i></i><i></i><i></i></span></span></button>
+    </div>
+  </aside>
+  <main>
+    <section id="overview" class="overview">
+      <div class="intro-flow intro-project">
+        <figure class="figure-card figure-right tilt-surface"><img src="assets/media/actweave_teaser.png" width="1840" height="900" alt="A tower-building operation links the intended bridge, its transport program, and evidence of support."></figure>
+        <h1>ActWeave</h1>
+        <p class="project-subtitle">Effect-Threaded Programming<br>for Embodied Control</p>
+        <p class="intro-copy">ActWeave makes physical operations a first-class abstraction for embodied programming. It weaves an operation's intent, executable programs, and effect evidence into an evolving <strong>Effect Thread</strong>, connecting what the robot should change to what actually happens.</p>
+        <div class="project-links"><a class="button primary" href="https://github.com/ZJU-OmniAI/ActWeave">GitHub<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="intro-flow intro-concept">
+        <figure class="figure-card figure-left tilt-surface"><img src="assets/media/actweave_architecture.png" width="1792" height="1040" alt="Astra grounds intent and binds geometry to persistent Python programs. Execution receipts and observations return for effect reconciliation."></figure>
+        <h2>From intent to physical effect</h2>
+        <p class="intro-copy">A manipulation goal concerns relationships in the physical world: a grasp holds, a board gains support, or a bowl remains nested after release. These changes span programs, motions, and observations. Interfaces centered on individual tool calls scatter their goals and feedback, creating an <strong>Intent-Effect Gap</strong>.</p>
+        <p class="intro-copy">An Effect Thread gives each operation a persistent identity and revision. Intent, geometric assumptions, execution receipts, and observed effects stay connected as Astra plans, acts, and revises its next decision.</p>
+      </div>
+    </section>
+    <section id="method" class="content-section">
+      <div class="section-heading"><h2>Effect-Threaded Programming</h2></div>
+      <div class="method-cards" aria-label="Operation stages">
+        <article class="method-card tilt-surface" data-phase="0" tabindex="0" role="button" aria-pressed="true" aria-labelledby="grounding-title" style="--stage-color:var(--intent);--stage-soft:var(--intent-soft)">
+          <svg class="method-icon" aria-hidden="true"><use href="#i-intent"/></svg><h3 id="grounding-title">Intent Grounding</h3>
+          <p>Give each physical operation explicit, persistent intent: the objects involved, current evidence, desired change, expected effect, and relations to preserve. Successive programs share the same goal and basis for decisions.</p>
+        </article>
+        <article class="method-card tilt-surface" data-phase="1" tabindex="0" role="button" aria-pressed="false" aria-labelledby="binding-title" style="--stage-color:var(--program);--stage-soft:var(--program-soft)">
+          <svg class="method-icon" aria-hidden="true"><use href="#i-code"/></svg><h3 id="binding-title">Execution Binding</h3>
+          <p>Ground object and functional-point geometry in current measurements. Hand-object bindings translate object goals into robot motion targets; persistent Python composes geometry, motion, and numerical branches. Execution intervals, endpoints, and errors remain linked to their operation.</p>
+        </article>
+        <article class="method-card tilt-surface" data-phase="2" tabindex="0" role="button" aria-pressed="false" aria-labelledby="reconciliation-title" style="--stage-color:var(--evidence);--stage-soft:var(--evidence-soft)">
+          <svg class="method-icon" aria-hidden="true"><use href="#i-eye"/></svg><h3 id="reconciliation-title">Effect Reconciliation</h3>
+          <p>Compare geometric residuals, source images, and visual judgments with the expected effect in the same thread. Astra uses this evidence to continue, refine parameters, or change the method, revising the operation as the physical situation evolves.</p>
+        </article>
+      </div>
+      <div class="weave-track" aria-hidden="true"><svg id="phase-weave" viewBox="0 0 620 110"></svg></div>
+    </section>
+    <section id="results" class="content-section">
+      <div class="section-heading"><h2>Results</h2></div>
+      <p class="results-intro">On a fixed 168-case evaluation spanning <strong>all 42 RoboDojo tasks and five capability dimensions</strong>, ActWeave achieves <strong>47.71% SR</strong> and <strong>55.49 Score</strong>, improving over Baseline by <strong>6.67 percentage points</strong> and <strong>8.08 points</strong>, respectively.</p>
+      <div class="results-charts">
+        <article class="result-chart" data-metric="sr" aria-labelledby="sr-title"><h3 id="sr-title">SR (%)</h3><div class="result-rows"></div><div class="result-axis" aria-hidden="true"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></article>
+        <article class="result-chart result-chart-reverse" data-metric="score" aria-labelledby="score-title"><h3 id="score-title">Score (0&ndash;100)</h3><div class="result-rows"></div><div class="result-axis" aria-hidden="true"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div></article>
+      </div>
+      <ul class="results-legend" aria-label="Chart legend"><li><span class="baseline-swatch" aria-hidden="true"></span>Baseline</li><li><span class="actweave-swatch" aria-hidden="true"></span>ActWeave</li></ul>
+      <p class="results-note">Both methods use the same four fixed seed-0 cases per task, including two standard and two randomized cases for Generalization. <strong>We will report results on the full 2,100-case evaluation, covering 50 cases per task, in a future update.</strong></p>
+    </section>
+    <section id="cases" class="content-section">
+      <div class="section-heading"><h2>Cases</h2></div>
+      <div class="case-layout">
+        <div class="case-intro"><p class="case-description" id="case-description"></p></div>
+        <div class="case-deck-area"><ul class="elasticstack" id="case-deck" aria-label="Recorded simulation cases"></ul></div>
+      </div>
+    </section>
+    <section id="components" class="content-section">
+      <div class="section-heading"><h2>Agent components</h2></div>
+      <div class="technology-orbit"><div class="orbit-ring" aria-hidden="true"></div><div class="swiper" id="technology-carousel" aria-label="Agent components"><div class="swiper-wrapper" id="technology-cards"></div></div></div>
+    </section>
+  </main>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/elastistack/modernizr.custom.js"></script>
+  <script src="assets/vendor/elastistack/draggabilly.pkgd.min.js"></script>
+  <script src="assets/vendor/elastistack/classie.js"></script>
+  <script src="assets/vendor/elastistack/elastiStack.js"></script>
+  <script src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

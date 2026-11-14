@@ -1,0 +1,24 @@
+@font-face{font-family:Sora;src:url('../fonts/sora.ttf') format('truetype');font-weight:100 800;font-display:swap}
+@font-face{font-family:Manrope;src:url('../fonts/manrope.ttf') format('truetype');font-weight:200 800;font-display:swap}
+@font-face{font-family:'DM Mono';src:url('../fonts/dm-mono.ttf') format('truetype');font-weight:400;font-display:swap}
+:root,[data-theme='light']{
+  color-scheme:light;
+  --page:#f8f7f2;--surface:#fffefa;--surface-alt:#eeede6;--rail:#f1efe7;
+  --ink:#25262b;--secondary:#62646e;--border:#dcdad1;--accent:#b65338;--accent-soft:#f3dfd5;
+  --result-baseline:#a69b8f;--result-actweave:#d97a57;
+  --intent:#8d7c70;--program:#b85e3e;--evidence:#6f706e;
+  --intent-soft:#eee7de;--program-soft:#f4dfd3;--evidence-soft:#e8e7e3;
+  --on-accent:#ffffff;--shadow:0 22px 50px -30px #35302652;--card-shadow:0 14px 32px -20px #36312670;
+  --font-heading:Sora,system-ui,sans-serif;--font-body:Manrope,system-ui,sans-serif;--font-mono:'DM Mono',monospace;
+  --radius:22px;--radius-small:12px;--rail-width:96px;
+  --display:64px;--heading:32px;--card-title:22px;--lead:20px;--body:16px;--caption:14px;--meta:12px;
+}
+[data-theme='dark']{
+  color-scheme:dark;
+  --page:#121a32;--surface:#1b2543;--surface-alt:#243153;--rail:#10172d;
+  --ink:#eef1ff;--secondary:#acb7d4;--border:#364362;--accent:#78bfff;--accent-soft:#233e60;
+  --result-baseline:#78bfff;--result-actweave:#c2adeb;
+  --intent:#869dd3;--program:#c2adeb;--evidence:#7873a4;
+  --intent-soft:#283653;--program-soft:#3a3155;--evidence-soft:#302e49;
+  --on-accent:#12223a;--shadow:0 24px 52px -24px #00000080;--card-shadow:0 18px 38px -20px #000000a0;
+}
